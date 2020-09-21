@@ -2,4 +2,5 @@
 
 * [Home](README.md)
 * [Designing a location based database](designing-a-location-based-database.md)
+* [Programming Language Jargons](programming-language-jargons.md)
 
