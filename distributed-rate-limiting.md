@@ -167,3 +167,14 @@ public class TimerWheel {
 
 ![](.gitbook/assets/distributedratelimitingcurrentprocess1-200528-164337.png)
 
+### Reference
+
+ Resources:  
+[https://www.confluent.io/blog/apache-kafka-purgatory-hierarchical-timing-wheels/](https://www.confluent.io/blog/apache-kafka-purgatory-hierarchical-timing-wheels/)  
+[https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs](https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs)  
+[https://www.facebook.com/zkmeetup/videos/2984998221531756/?t=1469](https://www.facebook.com/zkmeetup/videos/2984998221531756/?t=1469)  
+[https://github.com/google/guava/wiki/CachesExplained](https://github.com/google/guava/wiki/CachesExplained)  
+[https://community.akamai.com/customers/s/article/How-does-HTTP-2-solve-the-Head-of-Line-blocking-HOL-issue?language=en\_US](https://community.akamai.com/customers/s/article/How-does-HTTP-2-solve-the-Head-of-Line-blocking-HOL-issue?language=en_US)
+
+
+

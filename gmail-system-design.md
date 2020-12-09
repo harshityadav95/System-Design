@@ -113,7 +113,24 @@ Taking fault tolerance = 3 and localized processing = 10, we get = 4 \* _3 \*_ 1
 
 ![](.gitbook/assets/gmailpart51-200623-122935%20%281%29.png)
 
-[https://youtu.be/HqHIhYQr0uM](https://youtu.be/HqHIhYQr0uM)
+{% embed url="https://youtu.be/HqHIhYQr0uM" %}
+
+Resources:  
+1\) [Message Queues](https://youtu.be/oUJbuFMyBDk)  
+2\) [Publisher Subscriber Model](https://youtu.be/FMhbR_kQeHw)  
+3\) [Event Driven Architecture](https://youtu.be/rJHTK2TfZ1I)   
+4\) [Fan-out issues](https://youtu.be/QmX2NPkJTKg?t=936)   
+5\) [Distributed Caching](https://youtu.be/U3RkDLtS7uY)
+
+ 1\) [API Design](https://youtu.be/_YlYuNMTCc8)  
+2\) Resources mentioned in Part 2.
+
+Links:
+
+* Message Queue: https://youtu.be/oUJbuFMyBDk
+* Push vs. Pull Architecture \(Instagram video\): https://youtu.be/QmX2NPkJTKg?t=935
+
+Side car: [https://akomljen.com/kubernetes-service-mesh/](https://akomljen.com/kubernetes-service-mesh/)
 
 
 
