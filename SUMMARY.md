@@ -8,4 +8,5 @@
 * [Gmail System Design](gmail-system-design.md)
 * [Distributed Rate Limiting](distributed-rate-limiting.md)
 * [Audio Search Engine](untitled.md)
+* [Interaction Patterns](interaction-patterns.md)
 
