@@ -12,4 +12,6 @@
 * [Practical Database](practical-database.md)
 * [Code Style and Review](code-style-and-review.md)
 * [Calling App Design](calling-app-design.md)
+* [Low Level Design: Payment Tracking App](low-level-design-payment-tracking-app.md)
+* [Machine Coding :Cache](machine-coding-cache.md)
 
