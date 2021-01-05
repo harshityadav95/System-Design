@@ -17,4 +17,5 @@
 * [Interview Advice](interview-advice.md)
 * [Load Balancing Algorithm](load-balancing-algorithm.md)
 * [Zipping /Compression](zipping-compression.md)
+* [Stack](stack.md)
 
