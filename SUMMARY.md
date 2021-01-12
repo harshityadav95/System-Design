@@ -18,4 +18,5 @@
 * [Load Balancing Algorithm](load-balancing-algorithm.md)
 * [Zipping /Compression](zipping-compression.md)
 * [Stack](stack.md)
+* [SQL](sql.md)
 
