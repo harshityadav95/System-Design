@@ -1,14 +1,12 @@
 # Table of contents
 
 * [Home](README.md)
-* [Designing a location based database](designing-a-location-based-database.md)
 * [Programming Language Jargons](programming-language-jargons.md)
 * [Agile Scrum](agile-scrum.md)
 * [Uber](uber.md)
 * [Gmail System Design](gmail-system-design.md)
 * [Distributed Rate Limiting](distributed-rate-limiting.md)
 * [Audio Search Engine](untitled.md)
-* [Interaction Patterns](interaction-patterns.md)
 * [Code Style and Review](code-style-and-review.md)
 * [Calling App Design](calling-app-design.md)
 * [Low Level Design: Payment Tracking App](low-level-design-payment-tracking-app.md)
@@ -18,5 +16,8 @@
 * [Zipping /Compression](zipping-compression.md)
 * [Stack](stack/README.md)
   * [Database](stack/practical-database/README.md)
+    * [Designing a location based database](stack/practical-database/designing-a-location-based-database.md)
     * [SQL](stack/practical-database/sql.md)
+* [Design Patterns](design-patterns/README.md)
+  * [Interaction Patterns](design-patterns/interaction-patterns.md)
 
