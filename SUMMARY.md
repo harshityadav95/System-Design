@@ -20,4 +20,5 @@
     * [SQL](stack/practical-database/sql.md)
 * [Design Patterns](design-patterns/README.md)
   * [Interaction Patterns](design-patterns/interaction-patterns.md)
+* [Locale.ai](locale.ai.md)
 
