@@ -21,4 +21,5 @@
 * [Design Patterns](design-patterns/README.md)
   * [Interaction Patterns](design-patterns/interaction-patterns.md)
 * [Locale.ai](locale.ai.md)
+* [Version Control](version-control.md)
 
