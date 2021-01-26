@@ -22,4 +22,5 @@
   * [Interaction Patterns](design-patterns/interaction-patterns.md)
 * [Locale.ai](locale.ai.md)
 * [Version Control](version-control.md)
+* [Caches / Caching](caches-caching.md)
 
