@@ -7,7 +7,9 @@
 * Portable and Platform Independent
 * Improve Utilization of Hardware more efficient than VM
 
-![](.gitbook/assets/image%20%2833%29.png)
+![](.gitbook/assets/image%20%2834%29.png)
+
+![](.gitbook/assets/image%20%2835%29.png)
 
 ### Common Docker Commands
 
@@ -22,7 +24,7 @@
 * Docker file is the blueprint for an image  
 * Image is an Immutable file that contains  everything necessary to run an application
 
-![](.gitbook/assets/image%20%2834%29.png)
+![](.gitbook/assets/image%20%2837%29.png)
 
 * Images are read only  ,  Writeable Layer is placed on top to write files  
 * Layers can be shared between images which can save disk space and network bandwidth
@@ -44,6 +46,108 @@
 
 *  hostname/repository:tag
 * tag can be version number  of OS version etc
+
+### Running Containers
+
+```text
+# Check Docker is installed  
+docker --version
+
+# use docker CLI to list the images :
+docker images
+
+# pull Hello World Docker Image  
+docker pull hello-world
+
+# Run the hello World image
+docker run hello-world
+
+# List the containers to see that your container ran and exited successfully.
+docker ps -a
+
+# Remove the Docker Container
+# container ID optained from above command 
+docker container rm <container_id>
+
+# Run the Following Image 
+docker build . -t myimage:v1
+
+# Run the Image as Container
+docker run -p 8080:8080 myimage:v1
+
+# In another terminal ping the container
+curl localhost:8080
+
+# Stop the Docker Container
+docker stop $(docker ps -q)
+```
+
+## Container Orchestration
+
+* manage lifecycle of containers ,in dynamic environments
+* using Kubernetes 
+
+### Kubernetes Architecture
+
+![](.gitbook/assets/image%20%2833%29.png)
+
+### Labels / Selectors and Namespace in Cluster
+
+![](.gitbook/assets/image%20%2836%29.png)
+
+### Pod in Cluster
+
+* Wrapper for a Single Container
+* Replica set for Horizontal Scaling
+* specified using YAML file
+
+Imperative Commands
+
+Declarative Commands
+
+*  Apply Command 
+
+
+
+* Use the `kubectl` CLI
+* Create a Kubernetes Pod
+* Create a Kubernetes Deployment
+* Create a ReplicaSet that maintains a set number of replicas
+* Witness Kubernetes load balancing in action
+
+```text
+# Verify the kubectl
+kubectl version
+
+#kubectl requires configuration so that it targets the appropriate cluster. Get cluster information with the following command:
+kubectl config get-clusters
+
+# A kubectl context is a group of access parameters, including a cluster, a user, and a namespace. View your current context with the following command:
+kubectl config get-contexts
+
+#List all the Pods in your namespace
+kubectl get pods
+
+#describe pods
+kubectl describe pod hello-world
+
+# Delete the Pod
+kubectl delete pod hello-world
+
+# Imperatively create a Pod using the provided configuration file.
+kubectl create -f hello-world-create.yaml
+
+#Use the kubectl apply command to set this configuration as the desired state in Kubernetes
+kubectl apply -f hello-world-apply.yaml
+
+#List Services in order to see that this service was created
+kubectl get services
+
+#Delete the Deployment and Service
+kubectl delete deployment/hello-world service/hello-world
+```
+
+#### Managing Applications with Kubernetes
 
 
 
