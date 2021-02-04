@@ -149,6 +149,8 @@ kubectl delete deployment/hello-world service/hello-world
 
 #### Managing Applications with Kubernetes
 
+* Replicaset
+* 
 
 
 
