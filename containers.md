@@ -82,6 +82,47 @@ curl localhost:8080
 docker stop $(docker ps -q)
 ```
 
+### Docker Command Sheet
+
+```text
+# Install docker
+sudo apt-get get install docker.io
+
+# list Docker version
+sudo docker --version
+
+# Download and create a docker image with ubuntu latest version
+sudo docker run --name myubuntu ubuntu:latest
+
+# list all the docker images
+sudo docker ps -a
+
+# run and -it is to atach the new container terminals
+sudo docker run -it  --name myubuntu1 ubuntu:latest 
+
+# connect to docker terminal  
+sudo docker attach myubuntu1 
+# cntl q command to exit
+
+# Display the working directory of the container
+sudo docker exec myubuntu1 pwd
+
+# Display the environment variable of the container
+sudo docker exec myubuntu echo $PATH
+
+# List all the Running containers
+sudo docker ps -a
+
+# Delete a container  
+sudo docker rm -f myubuntu
+
+# Run Container that runs in background
+sudo docker run -d --name myubuntu ubuntu:latest
+
+
+
+```
+
 ## Container Orchestration
 
 * manage lifecycle of containers ,in dynamic environments
