@@ -149,8 +149,88 @@ kubectl delete deployment/hello-world service/hello-world
 
 #### Managing Applications with Kubernetes
 
-* Replicaset
-* 
+```text
+# Build an Image  
+docker build -t us.icr.io/$MY_NAMESPACE/hello-world:1 . && docker push us.icr.io/$MY_NAMESPACE/hello-world:1
+
+# Run Image as Deployment
+kubectl apply -f deployment.yaml
+
+# Access the Application  
+kubectl expose deployment/hello-world --type=NodePort --port=8080 --name=hello-world --target-port=8080
+
+# Scale  up deployment
+kubectl scale deployment hello-world --replicas=3
+
+#scale down deployment
+kubectl scale deployment hello-world --replicas=1
+
+# Getting Rollout Update
+kubectl rollout status deployment/hello-world
+
+# Create a ConfigMap that contains a new message
+kubectl create configmap app-config --from-literal=MESSAGE="This message came from a ConfigMap!"
+
+# Build and push a new image that contains your new application code
+docker build -t us.icr.io/$MY_NAMESPACE/hello-world:3 . && docker push us.icr.io/$MY_NAMESPACE/hello-world:3
+
+# delete the old ConfigMap and create a new one with the same name but a different message
+kubectl delete configmap app-config && kubectl create configmap app-config --from-literal=MESSAGE="This message is different, and you didn't have to rebuild the image!"
+
+# Restart the Deployment so that the containers restart
+kubectl rollout restart deployment hello-world
+
+# Delete the Deployment
+kubectl delete -f deployment-configmap-env-var.yaml
+```
+
+### Openshift Architecture
+
+![](.gitbook/assets/image%20%2838%29.png)
+
+### Source to Image
+
+![](.gitbook/assets/image%20%2839%29.png)
+
+### Build Triggers
+
+![](.gitbook/assets/image%20%2841%29.png)
+
+### Istio
+
+![](.gitbook/assets/image%20%2840%29.png)
+
+### Cloud Native computing Foundation
+
+![](.gitbook/assets/image%20%2843%29.png)
+
+### Redhat Openshift \(Code snippets\)
+
+* Use the `oc` CLI
+* Use the OpenShift web console
+* Build and deploy an application using s2i
+* Inspect a BuildConfig and an ImageStream
+
+```text
+# Check OC version
+oc version
+
+# List the pods in the Namespace
+oc get pods
+
+# In addition to Kubernetes objects, you can get OpenShift specific objects.
+oc get buildconfigs
+
+# View the OpenShift project that is currently in use.
+
+
+
+```
+
+
+
+
+
 
 
 
