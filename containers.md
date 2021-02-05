@@ -119,8 +119,8 @@ sudo docker rm -f myubuntu
 # Run Container that runs in background
 sudo docker run -d --name myubuntu ubuntu:latest
 
-
-
+# Map port  
+sudo docker run  -d -p 80:80 myubunut
 ```
 
 ## Container Orchestration
