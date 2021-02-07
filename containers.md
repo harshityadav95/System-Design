@@ -113,14 +113,24 @@ sudo docker exec myubuntu echo $PATH
 # List all the Running containers
 sudo docker ps -a
 
-# Delete a container  
+# List all docker ID 
+docker ps -aq
+
+# remove all docker container at once  
+docker rm $(docker ps -aq)
+
+
+# Delete a container   -f is for force remove
 sudo docker rm -f myubuntu
 
 # Run Container that runs in background
 sudo docker run -d --name myubuntu ubuntu:latest
 
 # Map port  
-sudo docker run  -d -p 80:80 myubunut
+sudo docker run  -d -p 8080:80 myubunut
+
+# docker terminal connect
+docker exec -it <id> bash
 ```
 
 ## Container Orchestration
