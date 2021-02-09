@@ -144,9 +144,13 @@ docker exec -it new_site bash
 - exit the project using " exit"
  
 # create a folder in local machine and create a folder
-# -v is for refering to a volume
+# -v is for refering to a volume -p port
 docker run -d -p 8081:80 --name website2 -v $(pwd):/website nginx
- 
+
+# For Windows
+docker run -d -p 8080:80 --name website2 -v "%cd%":/usr/share/nginx/html nginx
+
+   
  # verify the container
  docker exec -it website2 bash
  
