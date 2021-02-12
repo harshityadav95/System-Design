@@ -72,8 +72,17 @@ docker container rm <container_id>
 # Run the Following Image 
 docker build . -t myimage:v1
 
-# Run the Image as Container
-docker run -p 8080:8080 myimage:v1
+#build from $code Dockerfile
+docker build -t myfirstship .
+
+#Run Docker Image (Static Port same)
+docker run -d -p 80:80 myfirstship
+
+#Run Another Instance of the Same thing (Random port)
+docker run -d -p myfirstship
+
+# Run the Image as Container (8888 -> 80)
+docker run -p 8888:80 myimage:v1
 
 # In another terminal ping the container
 curl localhost:8080
@@ -159,6 +168,16 @@ docker run -d -p 8080:80 --name website2 -v "%cd%":/usr/share/nginx/html nginx
  
  
 ```
+
+##  Troubleshooting and Monitoring Containers
+
+```text
+# Stats for the docker
+docker stats
+
+```
+
+
 
 ## Container Orchestration
 
