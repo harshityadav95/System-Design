@@ -174,10 +174,22 @@ docker run -d -p 8080:80 --name website2 -v "%cd%":/usr/share/nginx/html nginx
 ```text
 # Stats for the docker
 docker stats
+docker logs <id>
 
 ```
 
+```text
+# Docker Run Python 3.6
+docker --rm -ti python:3.6 python
 
+# Docker Run Python 2.7
+docker run --rm -ti python:2.7 python
+
+# Run Jupyter Notebook
+docker run --rm -p 8888:8888 jupyter/scipy-notebook
+
+
+```
 
 ## Container Orchestration
 
