@@ -191,21 +191,24 @@ docker run -d -p 8080:80 --name website2 -v "%cd%":/usr/share/nginx/html nginx
  
  # Create Image tar file from docker image in current path
   docker save myImage/myapp > webapp.tar
+  
+
  
  # Load Tar file as docker image
   docker load -i webapp.tar
   
  ---------------------------------------------------------------------
   
+ # Create Image Tar of the system
  
+ # create an ubuntu image
+ docker run -it --name myUbuntu ubuntu
  
+ # Create Tar file
+ docker export myUbuntu > newsystem.tar
  
- 
- 
- 
- 
- 
- 
+ # Unzip from Tar file back
+ sudo docker import - myImnage/ubuntu < newsystem.tar 
 ```
 
 ##  Troubleshooting and Monitoring Containers
@@ -214,7 +217,6 @@ docker run -d -p 8080:80 --name website2 -v "%cd%":/usr/share/nginx/html nginx
 # Stats for the docker
 docker stats
 docker logs <id>
-
 ```
 
 ```text
@@ -226,8 +228,6 @@ docker run --rm -ti python:2.7 python
 
 # Run Jupyter Notebook
 docker run --rm -p 8888:8888 jupyter/scipy-notebook
-
-
 ```
 
 ## Container Orchestration
