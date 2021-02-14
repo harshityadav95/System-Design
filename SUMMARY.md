@@ -26,4 +26,5 @@
 * [High Level Design](high-level-design.md)
 * [Low Level Design](low-level-design.md)
 * [Containers](containers.md)
+* [Linux Directories](linux-directories.md)
 
