@@ -163,6 +163,45 @@ docker run -d -p 8080:80 --name website2 -v "%cd%":/usr/share/nginx/html nginx
  # verify the container
  docker exec -it website2 bash
  
+ --------------------------------------------------------
+ 
+ # Create docker volume
+ docker volume create my-vol
+ 
+ #inspect docker volume
+ docker inspect my-vol
+ 
+ # Attach the docker volume to the contianer 
+ # mapping multiple ports
+ # adding the volume <vol_name>:path in container to copy volume data 
+ docker run -d --name myimage -p 5000:5000 -p 8087:8000 -v my-vol:/var/jenkins myImage
+ 
+ 
+ ---------------------------------------------------------------------
+ 
+ # Copy Data from container to Host
+ 
+ # Create the folder
+ mkdir data
+ 
+ # copying the data from container to host
+ docker cp myImage:/var/jenkins_home ./data
+ 
+ --------------------------------------------------------------------
+ 
+ # Create Image tar file from docker image in current path
+  docker save myImage/myapp > webapp.tar
+ 
+ # Load Tar file as docker image
+  docker load -i webapp.tar
+  
+ ---------------------------------------------------------------------
+  
+ 
+ 
+ 
+ 
+ 
  
  
  
